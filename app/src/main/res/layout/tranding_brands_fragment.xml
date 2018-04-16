@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/root_view"/>
+
+    <LinearLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:elevation="10dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/standart_ripple"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip">
+
+        <ImageView
+            android:id="@+id/icon_brand"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="6dip"
+            android:layout_marginEnd="6dip"
+            android:layout_marginStart="40dip"
+            android:layout_marginTop="6dip"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/name_brand"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_color"
+                android:textSize="20sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="3"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"/>
+
+                <RatingBar
+                    android:id="@+id/beat_rating"
+                    style="@style/beatRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:layout_marginStart="8dip"
+                    android:layout_marginTop="6dip"
+                    android:layout_toEndOf="@+id/rating_text"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:numStars="1"
+                    android:stepSize="0.01"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.mgrmobi.brandbeat.ui.widget.progress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dip"
+        android:visibility="gone"
+        app:matProg_barColor="@color/button_background"
+        app:matProg_progressIndeterminate="true"/>
+</RelativeLayout>

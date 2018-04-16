@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:elevation="5dip"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="2dip"
+        card_view:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="17dip"
+            android:layout_marginRight="17dip">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatarImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:src="@drawable/icon512"
+                fresco:actualImageScaleType="fitCenter"  />
+                <!--fresco:placeholderImage="@drawable/icon512"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundedCornerRadius="4dp"/>-->
+
+            <LinearLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:layout_toRightOf="@+id/avatarImageView"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/SmallText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/avatarImageView"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/second_title"
+                    style="@style/SmallText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_primary"
+                    android:layout_toEndOf="@+id/title"
+                    android:gravity="left"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time_ago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_layout"
+                android:gravity="left"
+                android:maxLength="3"
+                android:textSize="18sp"/>
+
+            <com.mgrmobi.brandbeat.ui.widget.RatingWidgetWithoutBackground
+                android:id="@+id/rating_widjet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_layout"
+                android:layout_marginStart="10dip"
+                android:layout_marginTop="7dip"
+                android:layout_toRightOf="@+id/avatarImageView"/>
+
+            <TextView
+                android:id="@+id/review_summ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating_widjet"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/avatarImageView"
+                android:text=""/>
+
+            <LinearLayout
+                android:id="@+id/frame_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_summ"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/rectangle_drawable"
+                android:orientation="vertical"
+                android:paddingBottom="10dip"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,211 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.21.7'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'testfairy'
+apply plugin: 'io.fabric'
+
+def versionMajor = 0
+def versionMinor = 0
+def versionPatch = 49
+
+//def gitVersion() {
+//    def branch = "origin/$git_branch"
+//    def process = "git rev-list $branch --first-parent --count".execute()
+//    return process.text.toInteger()
+//}
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion version_buildTools
+
+    defaultConfig {
+        applicationId "com.mgrmobi.brandbeat"
+        multiDexEnabled true
+        minSdkVersion version_sdk_min
+        targetSdkVersion 22
+//        versionCode gitVersion()
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            buildConfigField "String", "REST_API_ENDPOINT", "\"http://128.199.191.185:3000/\""
+//            buildConfigField "String", "REST_API_ENDPOINT", "\"http://128.199.191.185:3000/\""
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            buildConfigField "String", "REST_API_ENDPOINT", "\"http://128.199.191.185:3000/\""
+//            buildConfigField "String", "REST_API_ENDPOINT", "\"http://128.199.191.185:3000/\""
+        }
+    }
+
+    applicationVariants.all { variant ->
+        renameArtifact(variant, 'brandbeat', defaultConfig)
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/notice'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/license'
+    }
+    lintOptions {
+        abortOnError false
+        enable 'BackButton'
+        enable 'GradleDynamicVersion'
+        enable 'NewerVersionAvailable'
+
+        disable 'MissingTranslatioAndn'
+        disable 'InvalidPackage'
+        disable 'ExtraTranslation'
+    }
+    dexOptions {
+        incremental true
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testfairyConfig {
+        apiKey "f9928ea42371e2c9d7121dc0d411a7b9329371ee"
+        metrics "cpu,memory,network,logcat,gps,battery"
+        video "on"
+        videoRate "0.5"
+        videoQuality "low"
+        maxDuration "1h"
+        recordOnBackground true
+        iconWatermark true
+        testersGroups "all"
+        notify true
+        maxDuration "5h"
+        autoUpdate false
+        uploadProguardMapping false
+    }
+    retrolambda {
+        javaVersion JavaVersion.VERSION_1_7
+        defaultMethods false
+        jvmArgs '-noverify'
+        incremental false
+    }
+}
+dependencies
+        {
+            compile fileTree(include: ['*.jar'], dir: 'libs')
+            compile(
+                    "com.android.support:appcompat-v7:$version_appcompat",
+                    "com.android.support:design:$version_appcompat"
+            )
+
+            compile("com.magorasystems.android:android-common-social:0.1.0") {
+                transitive = true
+            }
+            compile(
+                    project(':android-reactive-location'),
+            )
+
+            compile("com.crashlytics.sdk.android:crashlytics:$version_fabric@aar") {
+                transitive = true
+            }
+            compile 'com.facebook.fresco:imagepipeline-okhttp3:0.11.0'
+            compile("com.facebook.fresco:fresco:$version_fresco") {
+            }
+            compile 'com.squareup.okhttp3:logging-interceptor:3.0.1'
+            compile(
+                    "com.squareup.retrofit2:retrofit:$version_retrofit2",
+                    "com.squareup.retrofit2:converter-gson:$version_retrofit2",
+                    "com.squareup.retrofit2:adapter-rxjava:$version_retrofit2",
+            )
+            compile(
+                    "com.google.dagger:dagger:$version_dagger",
+                    "javax.annotation:jsr250-api:$version_jsr250"
+            )
+
+            apt "com.google.dagger:dagger-compiler:$version_dagger"
+
+            compile(
+                    "com.jakewharton.rxbinding:rxbinding:$version_rxbinding",
+                    "com.jakewharton:butterknife:$version_butterknife"
+            )
+            compile(
+                    "io.reactivex:rxandroid:1.2.0",
+                    "io.reactivex:rxjava:1.1.5"
+            )
+            testCompile(
+                    "junit:junit:$version_junit"
+            )
+
+            compile(
+                    "com.google.android.gms:play-services-gcm:$version_googlePlayServices"
+            )
+            compile("com.magorasystems.android:googleplus:0.1.3@aar") {
+                transitive = true
+            }
+            compile("com.magorasystems.android:facebook:$version_magora_social@aar") {
+                transitive = true
+            }
+
+            compile("com.magorasystems.android:twitter:$version_magora_social@aar") {
+                transitive = true
+            }
+            compile("com.magorasystems.android:linkedin:$version_magora_social@aar") {
+                transitive = true
+            }
+//            compile ("com.magorasystems.android:rx-activity-result-permission:$version_activity_result@aar") {
+//                transitive = true
+//            }
+            compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.0@aar'
+            compile 'io.reactivex:rxandroid:1.2.1'
+            compile 'io.reactivex:rxjava:1.1.6'
+
+
+            compile 'com.squareup.picasso:picasso:2.5.2'
+            compile 'com.github.clans:fab:1.6.2'
+            compile 'me.relex:circleindicator:1.2.1@aar'
+
+           // compile ("com.magorasystems.android:rx-activity")
+
+//            compile 'io.reactivex:rxjava:1.1.0'
+//            compile 'io.reactivex:rxjava-async-util:0.21.0'
+//            compile 'io.reactivex:rxandroid:1.1.0'
+//            compile 'com.jakewharton.rxbinding:rxbinding:0.3.0'
+//            compile 'com.trello:rxlifecycle:0.4.0'
+//            compile 'com.trello:rxlifecycle-components:0.4.0'
+//
+//            compile fileTree(dir: 'libs', include: ['*.jar'])
+//            testCompile 'junit:junit:4.12'
+//            compile 'com.android.support:appcompat-v7:23.1.1'
+//            compile 'io.reactivex:rxandroid:1.1.0'
+        }
+apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.cinnober.gradle.semver-git'

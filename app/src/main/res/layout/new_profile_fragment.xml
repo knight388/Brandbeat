@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:background="@android:color/white"
+             android:layout_height="match_parent">
+
+    <com.mgrmobi.brandbeat.ui.widget.brand_view.WidgetCoverSwapper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        android:id="@+id/id_widget_event_cover_swapper"/>
+
+    <com.mgrmobi.brandbeat.ui.widget.brand_view.ScalableImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/blurred_image"
+        android:alpha="0"
+        android:src="@drawable/profile_placeholder"
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/coordinator_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottom_sheet"
+                android:alpha="0"
+                android:orientation="vertical"
+                app:elevation="8dp"
+                app:behavior_custom_peekHeight="300dp"
+                app:behavior_custom_minOffset="1dp"
+                app:behavior_custom_hideable="false"
+                app:layout_behavior="@string/behavior_event_details_bottomsheet">
+
+                <com.mgrmobi.brandbeat.ui.widget.brand_view.EventDetailsRecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycle"
+                    style="@style/BackgroundWhite"/>
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</FrameLayout>

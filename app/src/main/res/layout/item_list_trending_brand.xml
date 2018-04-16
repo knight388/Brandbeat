@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/standart_ripple"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="5.0"
+        android:layout_marginStart="@dimen/standart_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/position_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:layout_weight="20"
+            android:gravity="center_vertical"
+            android:maxLength="2"
+            android:text="10"
+            android:textColor="@color/black_color"
+            android:textSize="16dp"/>
+
+        <ImageView
+            android:id="@+id/icon_brand"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="50.0"
+            android:layout_gravity="center_vertical"
+            android:padding="6dip"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="124"
+            android:paddingStart="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/name_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="dfasfsdfsadfdas"
+                android:textColor="@color/black_color"
+                android:textSize="20sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.mgrmobi.brandbeat.ui.widget.RatingWidget
+                    android:id="@+id/rating_widjet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/review_count"
+                    android:layout_below="@+id/rating_widjet"
+                    android:text="dgfaskljdasfhdku"
+                    android:layout_marginTop="15dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/standart_margin"
+        android:layout_marginStart="5dip"
+        android:layout_weight="2.0"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/arrow_icon"
+            android:layout_width="0dip"
+            android:layout_height="20dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/change_position"
+            android:layout_width="0dip"
+            android:layout_height="22dp"
+            android:layout_weight="1.0"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/black_color"
+            android:textSize="18dp"
+            />
+    </LinearLayout>
+</LinearLayout>

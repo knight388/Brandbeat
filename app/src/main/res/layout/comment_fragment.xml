@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_comment"
+        android:id="@+id/title"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/left_dialog_margin"
+        android:layout_marginLeft="@dimen/left_dialog_margin"/>
+
+    <ImageView
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:scaleType="center"
+        android:id="@+id/cancel_button"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_clear_black_24dp"
+        android:layout_marginTop="@dimen/top_dialog_margin"
+        android:layout_marginRight="@dimen/right_dialog_margin"
+        android:background="@drawable/standart_ripple"
+        android:clickable="true"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/input_email_container"
+        android:layout_marginTop="@dimen/top_dialog_margin"
+        android:layout_marginLeft="@dimen/left_dialog_margin"
+        android:layout_marginRight="@dimen/right_dialog_margin"
+        style="@style/TextInputLayoutStyle"
+        app:counterMaxLength="300"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/input_comment"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:maxLength="300"
+            android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/submit_button"
+        android:background="@drawable/standart_ripple"
+        android:textColor="@color/color_accent"
+        android:layout_width="wrap_content"
+        android:textSize="13sp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/top_dialog_margin"
+        android:layout_marginLeft="@dimen/left_dialog_margin"
+        android:layout_marginRight="@dimen/right_dialog_margin"
+        android:layout_marginBottom="@dimen/bottom_dialog_margin"
+        android:textAllCaps="true"
+        android:layout_below="@+id/input_email_container"
+        android:text="@string/submit"/>
+</RelativeLayout>

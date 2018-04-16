@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/photo_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:background="@drawable/profile_placeholder"
+                    android:scaleType="centerCrop">
+                </com.facebook.drawee.view.SimpleDraweeView>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/show_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:elevation="15dip"
+                    android:src="@color/color_clear"
+                    app:layout_anchorGravity="top|end"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/add_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:background="@drawable/standart_ripple"
+                        android:gravity="center"
+                        android:text="@string/add_picture"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_accent"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/achievments"
+                        style="@style/SmallText"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dip"
+                        android:background="@android:color/white"
+                        android:text="@string/achievements"
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/achievments_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center"
+                        android:background="@android:color/white"
+                        android:paddingBottom="10dip"
+                        android:paddingTop="10dip"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:elevation="15dip"
+                android:src="@drawable/white_edit"
+                app:layout_anchor="@id/photo_image"
+                app:layout_anchorGravity="bottom|end"/>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <View
+            style="@style/HorizontalLine"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reviews_count"
+                    style="@style/BigText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    style="@style/SmallText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reviews"
+                    android:textColor="@color/grey_text"/>
+            </LinearLayout>
+
+            <View
+                style="@style/VerticalLine"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/followers_count"
+                    style="@style/BigText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    style="@style/SmallText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followers"
+                    android:textColor="@color/grey_text"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalLine"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/review_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="14.5dip"
+            android:layout_marginTop="11dip"
+            android:text="@string/reviews"
+            android:textColor="@android:color/black"
+            android:textSize="24dip"/>
+    </LinearLayout>
+</LinearLayout>

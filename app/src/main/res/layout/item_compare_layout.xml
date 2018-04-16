@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="15dip">
+
+        <TextView
+            android:id="@+id/name_brand"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:minHeight="20dp"
+            android:layout_marginTop="12dip"
+            android:text="Pepsi"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_weight="19"
+            android:layout_width="149dip"
+            android:textSize="13sp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/standart_margin"
+            android:layout_marginTop="4dip"
+            android:lines="2"
+            android:text="asdfasdfdasfdas fsdaf das fdasf asdf"/>
+
+        <ImageView
+            android:id="@+id/brand_logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="155"
+            android:paddingEnd="15dip"
+            android:layout_marginTop="34dip"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/rate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dip"
+            android:layout_weight="74"
+            android:fontFamily="sans-serif-light"
+            android:maxLength="3"
+            android:text="0.0"
+            android:textColor="@color/color_accent"
+            android:textSize="54sp"
+            android:textStyle="bold"
+            />
+
+        <RatingBar
+            android:id="@+id/beat_rating"
+            style="@style/beatRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_below="@+id/name_brand"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/raiting"
+            android:numStars="1"
+            android:stepSize="0.01"/>
+
+        <TextView
+            android:id="@+id/rated_count"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/standart_margin"
+            android:layout_weight="20"
+            android:layout_marginTop="4dip"
+            android:text=""
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/standart_margin"
+            android:layout_marginTop="4dip"
+            android:text=""
+            android:layout_weight="20"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/review"
+            android:layout_width="92dip"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="44dip"
+            android:background="@drawable/standart_ripple"
+            android:text="@string/review"
+            android:textColor="@color/color_accent"/>
+    </LinearLayout>
+</LinearLayout>

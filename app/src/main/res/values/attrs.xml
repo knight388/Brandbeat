@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="customFont" format="string"/>
+    <attr name="emulateRippleEffect" format="boolean"/>
+    <attr name="drawableTintColor" format="color"/>
+    <attr name="drawableStartTintColor" format="color"/>
+    <attr name="drawableEndTintColor" format="color"/>
+    <attr name="drawableTopTintColor" format="color"/>
+    <attr name="drawableBottomTintColor" format="color"/>
+
+    <declare-styleable name="CustomFontTextView">
+        <attr name="customFont"/>
+        <attr name="emulateRippleEffect"/>
+        <attr name="drawableTintColor"/>
+        <attr name="drawableStartTintColor"/>
+        <attr name="drawableEndTintColor"/>
+        <attr name="drawableTopTintColor"/>
+        <attr name="drawableBottomTintColor"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RippleDrawable">
+        <attr name="custom_rippleBackgroundColor" format="reference|color"/>
+        <attr name="custom_rippleBackgroundAnimDuration" format="reference|integer"/>
+        <attr name="custom_rippleMaxRippleRadius" format="reference|dimension|integer">
+            <enum name="match_view" value="0x00000000"/>
+        </attr>
+        <attr name="custom_rippleColor" format="reference|color"/>
+        <attr name="custom_rippleAnimDuration" format="reference|integer"/>
+        <attr name="custom_rippleInInterpolator" format="reference"/>
+        <attr name="custom_rippleOutInterpolator" format="reference"/>
+        <attr name="custom_rippleMaskType" format="integer">
+            <enum name="rectangle" value="0x00000000"/>
+            <enum name="oval" value="0x00000001"/>
+        </attr>
+        <attr name="custom_rippleType" format="integer">
+            <enum name="touch" value="0x00000000"/>
+            <enum name="wave" value="0x00000001"/>
+        </attr>
+        <attr name="custom_rippleCornerRadius" format="reference|dimension"/>
+        <attr name="custom_rippleTopLeftCornerRadius" format="reference|dimension"/>
+        <attr name="custom_rippleTopRightCornerRadius" format="reference|dimension"/>
+        <attr name="custom_rippleBottomLeftCornerRadius" format="reference|dimension"/>
+        <attr name="custom_rippleBottomRightCornerRadius" format="reference|dimension"/>
+        <attr name="custom_ripplePadding" format="reference|dimension"/>
+        <attr name="custom_rippleLeftPadding" format="reference|dimension"/>
+        <attr name="custom_rippleTopPadding" format="reference|dimension"/>
+        <attr name="custom_rippleRightPadding" format="reference|dimension"/>
+        <attr name="custom_rippleBottomPadding" format="reference|dimension"/>
+        <attr name="custom_rippleDelayClick" format="integer">
+            <enum name="none" value="0x00000000"/>
+            <enum name="untilRelease" value="0x00000001"/>
+            <enum name="afterRelease" value="0x00000002"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BaseTabLayout">
+        <attr name="btl_tabIndicatorColor" format="reference"/>
+        <attr name="btl_tabIndicatorHeight" format="dimension"/>
+        <attr name="btl_tabContentStart" format="dimension"/>
+        <attr name="btl_tabContentPaddingSymmetry" format="boolean"/>
+        <attr name="btl_tabBackground" format="reference"/>
+        <attr name="btl_tabMode">
+            <enum name="scrollable" value="0"/>
+            <enum name="fixed" value="1"/>
+        </attr>
+        <attr name="btl_tabGravity">
+            <enum name="fill" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+        <attr name="btl_tabMinWidth" format="dimension"/>
+        <attr name="btl_tabMaxWidth" format="dimension"/>
+        <attr name="btl_tabTextAppearance" format="reference"/>
+        <attr name="btl_tabTextColor" format="color"/>
+        <attr name="btl_tabSelectedTextColor" format="color"/>
+        <attr name="btl_tabPaddingStart" format="dimension"/>
+        <attr name="btl_tabPaddingTop" format="dimension"/>
+        <attr name="btl_tabPaddingEnd" format="dimension"/>
+        <attr name="btl_tabPaddingBottom" format="dimension"/>
+        <attr name="btl_tabPadding" format="dimension"/>
+        <attr name="btl_wrapIndicatorSizeToWordSize" format="boolean"/>
+        <attr name="emulateRippleEffect"/>
+    </declare-styleable>
+
+    <attr name="enableProgressOn" format="enum">
+        <enum name="topOnly" value="1"/>
+        <enum name="bottomOnly" value="2"/>
+        <enum name="topAndBottom" value="3"/>
+        <enum name="disableTopAndBottom" value="4"/>
+    </attr>
+
+    <declare-styleable name="BasePullToRefreshView">
+        <attr name="enableProgressOn"/>
+    </declare-styleable>
+
+    <declare-styleable name="DefaultPullToRefreshView">
+        <attr name="enableProgressOn"/>
+        <attr name="topProgressLayout" format="reference"/>
+        <attr name="bottomProgressLayout" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoScalingTextView">
+        <attr name="astv_text_1" format="string"/>
+        <attr name="astv_text_2" format="string"/>
+        <attr name="astv_gap_between" format="dimension"/>
+        <attr name="astv_ignore_line_1_descending" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean"/>
+        <attr name="matProg_barColor" format="color"/>
+        <attr name="matProg_rimColor" format="color"/>
+        <attr name="matProg_rimWidth" format="dimension"/>
+        <attr name="matProg_spinSpeed" format="float"/>
+        <attr name="matProg_barSpinCycleTime" format="integer"/>
+        <attr name="matProg_circleRadius" format="dimension"/>
+        <attr name="matProg_fillRadius" format="boolean"/>
+        <attr name="matProg_barWidth" format="dimension"/>
+        <attr name="matProg_linearProgress" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground"/>
+    </declare-styleable>
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="umanoPanelHeight" format="dimension"/>
+        <attr name="umanoShadowHeight" format="dimension"/>
+        <attr name="umanoParallaxOffset" format="dimension"/>
+        <attr name="umanoFadeColor" format="color"/>
+        <attr name="umanoFlingVelocity" format="integer"/>
+        <attr name="umanoDragView" format="reference"/>
+        <attr name="umanoScrollableView" format="reference"/>
+        <attr name="umanoOverlay" format="boolean"/>
+        <attr name="umanoClipPanel" format="boolean"/>
+        <attr name="umanoAnchorPoint" format="float"/>
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0"/>
+            <enum name="collapsed" value="1"/>
+            <enum name="anchored" value="2"/>
+            <enum name="hidden" value="3"/>
+        </attr>
+        <attr name="umanoScrollInterpolator" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="CustomInsetCollapsingToolbarLayout">
+        <attr name="cictl_expandedElevation" format="dimension"/>
+    </declare-styleable>
+
+    <attr name="behavior_custom_minOffset" format="dimension"/>
+    <attr name="behavior_custom_peekHeight" format="dimension"/>
+    <attr name="behavior_custom_middleOffset" format="dimension"/>
+    <attr name="behavior_custom_hideable" format="boolean"/>
+    <attr name="behavior_custom_middleOffsetDivider" format="integer"/>
+    <attr name="behavior_custom_measureDefault" format="boolean"/>
+
+    <declare-styleable name="EventDetailsBottomSheetBehavior_Params">
+        <attr name="behavior_custom_minOffset"/>
+        <attr name="behavior_custom_peekHeight"/>
+        <attr name="behavior_custom_middleOffset"/>
+        <attr name="behavior_custom_hideable"/>
+        <attr name="behavior_custom_measureDefault"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="EventDetailsRecyclerView">
+        <attr name="edrv_topOffset" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="EventDetailsAppBarLayout">
+        <attr name="edabl_bottomOffset" format="dimension"/>
+        <attr name="edabl_adjustStatusBarSize" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MatchParentOffsetLinearLayout">
+        <attr name="mpoll_bottomOffset" format="dimension"/>
+        <attr name="mpoll_adjustStatusBarSize" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextViewWithArrow">
+        <attr name="tvwa_arrowDrawable" format="reference"/>
+        <attr name="tvwa_animDistance" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="RippleSupportDraweeView">
+        <attr name="android:foreground"/>
+        <attr name="android:foregroundInsidePadding"/>
+        <attr name="android:foregroundGravity"/>
+    </declare-styleable>
+
+    <declare-styleable name="DiscoverEventsOnMapViewsBehavior_Params">
+        <attr name="behavior_marginBottom" format="dimension"/>
+        <attr name="behavior_hideOffset" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextureVideoView">
+        <attr name="tvv_videoCenterCrop" format="boolean"/>
+    </declare-styleable>
+
+</resources>

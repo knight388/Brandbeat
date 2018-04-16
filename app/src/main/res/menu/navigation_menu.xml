@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/feed"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/feed"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/write_review"
+            android:icon="@drawable/ic_chat_bubble_outline_black_24dp"
+            android:title="@string/write_review"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/trending"
+            android:icon="@drawable/ic_call_made_black_24dp"
+            android:title="@string/trending"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_perm_identity_black_24dp"
+            android:title="@string/profile"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/add_product"
+            android:icon="@drawable/ic_add_circle_outline_black_24dp"
+            android:title="@string/add_brand"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/recent"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/recent"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_interests"
+            android:icon="@drawable/ic_done_all_black_24dp"
+            android:title="@string/interests"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/notifications"
+            android:icon="@drawable/notifications"
+            android:title="@string/notification"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about_icon"
+            android:title="@string/about"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/terms_and_conditions"
+            android:icon="@drawable/terms"
+            android:title="@string/terms_and_conditions"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/send_feedback"
+            android:icon="@drawable/ic_send_black_24dp"
+            android:title="@string/send_feedback"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sign_out"
+            android:title="@string/sign_out"
+            />
+    </group>
+
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <com.mgrmobi.brandbeat.ui.widget.brand_view.ScalableDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:id="@+id/id_event_cover_drawee_bottom"
+        android:transitionName="eventDetails_eventLogo"
+        app:placeholderImage="@drawable/profile_placeholder"
+        android:scaleType="fitStart"
+        app:fadeDuration="0"
+        tools:targetApi="lollipop"/>
+
+    <com.mgrmobi.brandbeat.ui.widget.brand_view.ScalableDraweeView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center_horizontal"
+        android:layout_height="320dp"
+        android:scaleType="fitStart"
+        android:id="@+id/id_event_cover_drawee_top"
+        app:fadeDuration="0"/>
+</merge>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dip"
+        android:layout_marginTop="21dip"
+        android:text="@string/select_notification_type"
+        android:textColor="@color/black_color"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="81dip"
+        android:layout_marginTop="18dip"
+        android:src="@drawable/ic_smartphone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dip"
+        android:layout_marginTop="20dip"
+        android:src="@drawable/ic_email"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_layout"
+        android:layout_marginTop="64dip">
+
+        <TextView
+            style="@style/settingsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comments"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/leftCheckBoxSettings"
+            android:id="@+id/comment_phone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/rightCheckBoxSettings"
+            android:id="@+id/comment_email"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/replies_layout"
+        android:layout_below="@+id/comment_layout">
+
+        <TextView
+            style="@style/settingsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/replies"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/leftCheckBoxSettings"
+            android:id="@+id/replies_phone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/rightCheckBoxSettings"
+            android:id="@+id/replies_email"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_followers_layout"
+        android:layout_below="@+id/replies_layout">
+
+        <TextView
+            style="@style/settingsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_followers"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/leftCheckBoxSettings"
+            android:id="@+id/new_followers_phone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/rightCheckBoxSettings"
+            android:id="@+id/new_followers_email"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_achievements"
+        android:layout_below="@+id/new_followers_layout">
+
+        <TextView
+            style="@style/settingsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_achievements"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/leftCheckBoxSettings"
+            android:id="@+id/new_achievements_phone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/rightCheckBoxSettings"
+            android:id="@+id/new_achievements_email"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/administration_message_layout"
+        android:layout_below="@+id/new_achievements">
+
+        <TextView
+            style="@style/settingsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/administrator_messages"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/leftCheckBoxSettings"
+            android:id="@+id/administrator_phone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/rightCheckBoxSettings"
+            android:id="@+id/administration_email"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/administration_message_layout">
+
+        <TextView
+            style="@style/settingsTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/leftCheckBoxSettings"
+            android:id="@+id/news_phone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/rightCheckBoxSettings"
+            android:id="@+id/news_email"
+            />
+    </RelativeLayout>
+</RelativeLayout>

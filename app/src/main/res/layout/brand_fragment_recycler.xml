@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.mgrmobi.brandbeat.ui.widget.brand_view.WidgetCoverSwapper
+        android:id="@+id/id_widget_event_cover_swapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        tools:background="#939393"/>
+
+    <com.mgrmobi.brandbeat.ui.widget.brand_view.ScalableImageView
+        android:id="@+id/blurred_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:scaleType="centerCrop"
+        android:tint="@android:color/white"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.mgrmobi.brandbeat.ui.widget.brand_view.InsetToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:minHeight="?android:attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStart="0dp"
+            app:titleTextColor="@android:color/white">
+
+        </com.mgrmobi.brandbeat.ui.widget.brand_view.InsetToolbar>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.mgrmobi.brandbeat.ui.widget.brand_view.EventDetailsAppBarLayout
+                android:id="@id/id_appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:weightSum="1"
+                app:edabl_adjustStatusBarSize="false"
+                app:edabl_bottomOffset="100dp"
+                app:elevation="0dp"
+                app:layout_behavior="android.support.design.widget.EventDetailsHeaderBehavior">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:contentScrim="@null"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:statusBarScrim="@null">
+
+                    <TextView
+                        android:id="@+id/text_event_name"
+                        style="@style/CommonTextHeaderBold"
+                        android:layout_gravity="bottom|start"
+                        android:layout_margin="16dp"
+                        android:alpha="0"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:text=""
+                        android:textColor="@color/color_primary"
+                        android:textStyle="normal"
+                        tools:alpha="1"/>
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </com.mgrmobi.brandbeat.ui.widget.brand_view.EventDetailsAppBarLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:background="@drawable/background_with_top_rounded_corners"
+                android:orientation="vertical"
+                app:behavior_custom_hideable="false"
+                app:behavior_custom_minOffset="0dp"
+                app:behavior_custom_peekHeight="350dp"
+                app:elevation="8dp"
+                app:layout_behavior="@string/behavior_event_details_bottomsheet">
+
+                <com.mgrmobi.brandbeat.ui.widget.brand_view.EventDetailsRecyclerView
+                    android:id="@+id/recycler_view"
+                    style="@style/BackgroundWhite"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="100dp">
+    <LinearLayout
+        android:id="@+id/social_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/standart_margin"
+        android:orientation="horizontal">
+
+        <com.mgrmobi.brandbeat.ui.widget.ForegroundImageView
+            android:id="@+id/facebook_button"
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:foreground="@drawable/social_click"
+            android:scaleType="centerCrop"
+            android:src="@drawable/facebook"
+            />
+
+        <com.mgrmobi.brandbeat.ui.widget.ForegroundImageView
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:layout_marginStart="10dip"
+            android:id="@+id/twitter_button"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/social_click"
+            android:scaleType="centerCrop"
+            android:src="@drawable/twitter"
+            />
+
+        <com.mgrmobi.brandbeat.ui.widget.ForegroundImageView
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:id="@+id/google_plus_button"
+            android:layout_marginStart="10dip"
+            android:foreground="@drawable/social_click"
+            android:src="@drawable/btn_google"
+            />
+
+        <com.mgrmobi.brandbeat.ui.widget.ForegroundImageView
+            android:layout_width="@dimen/social_button_size"
+            android:layout_height="@dimen/social_button_size"
+            android:layout_marginStart="10dip"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/social_click"
+            android:scaleType="centerCrop"
+            android:id="@+id/linked_in_button"
+            android:src="@drawable/linkedin"
+            />
+    </LinearLayout>
+</RelativeLayout>

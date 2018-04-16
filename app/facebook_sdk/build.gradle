@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion version_sdk_target
+    buildToolsVersion version_buildTools
+
+
+    defaultConfig {
+        minSdkVersion version_sdk_min
+        targetSdkVersion version_sdk_target
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$version_appcompat"
+    //facebook
+    compile "com.facebook.android:facebook-android-sdk:$version_facebook"
+    compile(
+            "com.android.support:appcompat-v7:$version_appcompat",
+            "com.android.support:design:$version_appcompat"
+    )
+
+}

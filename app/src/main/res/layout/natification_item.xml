@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:auto="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="22dip"
+                android:clickable="true"
+                android:background="@drawable/grey_ripple"
+                android:paddingBottom="5dip">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:id="@+id/user_picture"
+        android:layout_marginStart="16dip"
+        android:scaleType="centerCrop"
+        auto:placeholderImage="@drawable/icon512"
+        auto:fadeDuration="150"
+        auto:roundAsCircle="true"
+        auto:roundedCornerRadius="15dp"
+        auto:viewAspectRatio="1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_user"
+        android:textColor="@color/text_color_menu"
+        android:text="test name"
+        android:layout_marginStart="15dip"
+        android:layout_toEndOf="@+id/user_picture"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:layout_marginStart="15dip"
+        android:layout_marginEnd="65dip"
+        android:text="test_text"
+        android:textColor="@color/simple_color"
+        android:layout_toEndOf="@+id/user_picture"
+        android:layout_below="@+id/name_user"
+        android:layout_marginTop="3dip"/>
+    <TextView
+        android:id="@+id/time_ago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/simple_color"
+        android:text="8 time ago"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dip"/>
+</RelativeLayout>

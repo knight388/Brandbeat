@@ -1,0 +1,9 @@
+Alias BrandBeat
+PasswordStorePassword: android
+Password2: infobrandbeat
+First Name and last name: Sari Kazma
+Organizational unit: management
+Organization: Brand Beat
+City: Riyadh
+Province: Central 
+Country code: 00966

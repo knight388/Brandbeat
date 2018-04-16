@@ -1,0 +1,272 @@
+<resources>
+    <style name="Theme.Transparent" parent="Theme.AppCompat">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="ThemePermissionsRationale" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/NoAnimation</item>
+    </style>
+
+    <style name="NoAnimation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@color/fab_background_color</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <style name="TypicalTextButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RemindPassword" parent="TypicalTextButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="LoginInputStyle">
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
+    <style name="EditTextLoginStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="EditTextEditProfileStyle">
+        <item name="android:textColor">@color/text_color_menu</item>
+        <item name="android:textColorHint">@color/text_color_menu</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SmallText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MiddleText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BigText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TitleWhiteText">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="HorizontalLine">
+        <item name="android:background">@color/grey_divider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dip</item>
+    </style>
+
+    <style name="VerticalLine">
+        <item name="android:background">@color/grey_divider</item>
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ActivityDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorControlNormal">@color/background_header_compare_item</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        <item name="colorControlHighlight">@color/background_header_compare_item</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorControlNormal">@color/color_accent</item>
+        <item name="colorControlActivated">@color/color_accent</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_accent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">@color/color_primary</item>
+        <item name="tabTextColor">#afffffff</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="beatRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="beatRatingBarClickable" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+    </style>
+
+
+
+    <style name="ratingBarSeek" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/seek_rating_bar</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+    <style name="TextErrorAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="EditProfile" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textColorHint">@color/text_color_menu</item>
+    </style>
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabPaddingStart">6dp</item>
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+    </style>
+
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="Widget.Holo.TextView.SpinnerItem" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="android:paddingStart">-5dp</item>
+    </style>
+
+    <style name="settingsTextStyle">
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:textColor">@color/text_color_menu</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">15dip</item>
+        <item name="android:layout_marginBottom">15dip</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <style name="rightCheckBoxSettings">
+        <item name="android:layout_marginEnd">5dip</item>
+        <item name="android:layout_marginTop">15dip</item>
+        <item name="android:layout_marginBottom">15dip</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="leftCheckBoxSettings">
+        <item name="android:layout_marginEnd">68dip</item>
+        <item name="android:layout_marginTop">15dip</item>
+        <item name="android:layout_marginBottom">15dip</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="CommonImageButtonBorderless" parent="android:Widget.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/shape_selectable_item_background_borderless_lt_grey</item>
+    </style>
+    <style name="BackgroundWhite">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="BackgroundBlack">
+        <item name="android:background">@android:color/black</item>
+    </style>
+    <style name="CommonToolbarTitle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CommonTextHeaderBold" parent="CommonText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CommonText" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <declare-styleable name="BaseOpenBottomSheetBehavior_Params">
+        <attr name="behavior_custom_minOffset"/>
+        <attr name="behavior_custom_peekHeight"/>
+        <attr name="behavior_custom_middleOffset"/>
+        <attr name="behavior_custom_hideable"/>
+        <attr name="behavior_custom_middleOffsetDivider"/>
+    </declare-styleable>
+</resources>

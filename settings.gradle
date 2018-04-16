@@ -1,0 +1,3 @@
+include ':app', ':android-reactive-location', ':common'
+project(':android-reactive-location').projectDir = new File('app/android-reactive-location')
+project(':common').projectDir = new File('app/common')

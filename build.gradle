@@ -1,0 +1,89 @@
+
+buildscript {
+
+    project.ext {
+
+        git_branch = 'develop'
+
+        version_appcompat = '23.3.0'
+        version_buildTools = '23.0.2'
+        version_sdk_target = 22
+        version_sdk_min = 18
+
+        version_retrofit = '1.9.0'
+        version_retrofit2 = '2.0.0-beta3'
+        version_okhttp = '3.0.1'
+        version_googlePlayServices = '8.4.0'
+
+        version_magora_social = '0.1.3'
+        version_rx = '1.1.0'
+        version_reactive =
+                version_rxbinding = '0.3.0'
+        version_retrolambda = '3.2.4'
+        version_butterknife = '7.0.1'
+        version_semver_git = '2.2.1'
+        version_fabric = '2.5.5'
+        version_fresco = '0.12.0'
+        version_dagger = '2.0.2'
+        version_jsr250 = '1.0'
+        version_activity_result = '0.0.2'
+        version_junit = '4.12'
+        version_facebook = '4.9.0'
+
+    }
+
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'https://www.testfairy.com/maven' }
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.testfairy.plugins.gradle:testfairy:1.12'
+        classpath 'io.fabric.tools:gradle:1.21.4'
+        classpath 'com.google.gms:google-services:2.0.0-alpha3'
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath "me.tatarka:gradle-retrolambda:$version_retrolambda"
+        classpath group: 'com.cinnober.gradle', name: 'semver-git', version: "$version_semver_git"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'https://www.testfairy.com/maven' }
+        maven { url 'https://maven.fabric.io/public' }
+        maven {
+            credentials {
+                username 'build'
+                password 'dj0asd123Ie3zxeBX8XYUrQSyi'
+            }
+            url "http://nexus.java.magora.team/content/repositories/releases/"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext.snapshotSuffix = "<count>.g<sha>-SNAPSHOT"
+ext.nextVersion = "patch"
+
+
+def renameArtifact(variant, projectName, defaultConfig) {
+    variant.outputs.each { output ->
+        output.outputFile = new File(
+                (String) output.outputFile.parent,
+                (String) output.outputFile.name.replace('app',
+                        "${projectName}-" +
+                                "${defaultConfig.versionCode}-" +
+                                "${project.version}"))
+    }
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:auto="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/brand_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatarImageView"
+        android:layout_marginTop="20dip">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/logo_brand"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginLeft="12dip"
+            android:scaleType="fitCenter"
+            auto:placeholderImage="@drawable/icon512"
+            auto:fadeDuration="150"
+            auto:roundAsCircle="true"
+            auto:roundedCornerRadius="15dp"
+            auto:viewAspectRatio="1"/>
+
+
+        <TextView
+            android:id="@+id/name_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/logo_brand"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/time_ago"
+            android:text="poashfjuasdp"
+            android:textSize="13sp"/>
+<com.mgrmobi.brandbeat.ui.widget.RatingWidget
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dip"
+    android:id="@+id/rating_widjet"
+    android:layout_toRightOf="@+id/logo_brand"
+    android:layout_below="@+id/name_brand"/>
+      <!--  <TextView
+            android:id="@+id/raiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_brand"
+            android:background="@drawable/background_rate_text"
+            android:layout_marginLeft="10dip"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:padding="3dp"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@+id/logo_brand"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="@style/beatRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_brand"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="8dip"
+            android:numStars="1"
+            android:stepSize="0.1"
+            android:layout_toRightOf="@+id/raiting"
+            android:rating="4"/>-->
+
+        <com.mgrmobi.brandbeat.ui.widget.hashTagTextView.HashTagTextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/logo_brand"
+            android:layout_margin="10dip"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/photo_recycler"
+            android:layout_below="@+id/about"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/like_comment_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dip"
+        android:layout_marginTop="5dip">
+
+        <TextView
+            android:id="@+id/count_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dip"
+            android:text="0"
+            android:textColor="@android:color/black"
+            />
+
+        <ImageView
+            android:id="@+id/icon_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            android:layout_toStartOf="@+id/count_comment"
+            android:src="@drawable/ic_comment"/>
+
+        <RelativeLayout
+            android:id="@+id/like_click"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/grey_ripple"
+            android:layout_toStartOf="@+id/icon_comment"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            >
+
+            <TextView
+                android:id="@+id/count_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dip"
+                android:text="0"
+                android:textColor="@android:color/black"
+                />
+
+            <ImageView
+                android:id="@+id/like_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dip"
+                android:layout_toStartOf="@+id/count_like"
+                android:src="@drawable/custom_ic_like_count"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

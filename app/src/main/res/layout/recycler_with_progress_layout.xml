@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/root_view"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:minHeight="300dp"
+                android:minWidth="300dp"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/standart_margin"
+        android:gravity="center"
+        android:textColor="@color/black_color"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/grid_interests"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dip"
+        android:visibility="visible"/>
+
+    <com.mgrmobi.brandbeat.ui.widget.progress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dip"
+        android:visibility="gone"
+        app:matProg_barColor="@color/button_background"
+        app:matProg_progressIndeterminate="true"/>
+</RelativeLayout>

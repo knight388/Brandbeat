@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:auto="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View
+        style="@style/HorizontalLine"
+        android:layout_marginTop="20dip"
+        android:background="@color/delimetr_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dip"
+        android:layout_marginEnd="17dip"
+        android:layout_marginTop="25dip">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/avatarImageView"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginStart="12dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="centerCrop"
+            auto:placeholderImage="@drawable/icon512"
+            auto:fadeDuration="150"
+            auto:roundAsCircle="true"
+            auto:roundedCornerRadius="15dp"
+            auto:viewAspectRatio="1"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/SmallText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_toEndOf="@+id/avatarImageView"
+            android:gravity="left"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="10dip"
+            android:layout_toEndOf="@+id/avatarImageView"
+            android:gravity="left"/>
+
+        <RelativeLayout
+            android:id="@+id/brand_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatarImageView"
+            android:layout_marginStart="20dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/rectangle_brand_with_small_radius"
+            android:padding="5dip"
+            >
+
+            <ImageView
+                android:id="@+id/logo_brand"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="5dip"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:id="@+id/name_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/logo_brand"
+                android:text="Pepsi"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+
+            <com.mgrmobi.brandbeat.ui.widget.RatingWidget
+                android:id="@+id/rating_widjet"
+                android:layout_toRightOf="@+id/logo_brand"
+                android:layout_below="@+id/name_brand"
+                android:layout_marginStart="10dip"
+                android:layout_marginTop="7dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.mgrmobi.brandbeat.ui.widget.hashTagTextView.HashTagTextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating_widjet"
+                android:layout_margin="10dip"/>
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/photo_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dip"
+            android:layout_marginTop="10dip"
+            android:layout_below="@+id/brand_view"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="39dip"
+            android:layout_below="@+id/photo_recycler"
+            android:layout_marginStart="10.1dip"
+            android:layout_marginTop="27dip">
+
+            <RelativeLayout
+                android:id="@+id/like_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                >
+
+                <TextView
+                    android:id="@+id/count_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="10dip"
+                    android:layout_toEndOf="@+id/icon_like"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    />
+
+                <ImageView
+                    android:id="@+id/icon_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="6dip"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/custom_ic_like_count"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/count_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dip"
+                android:layout_marginEnd="10dip"
+                android:layout_toEndOf="@+id/icon_comment"
+                android:text="0"
+                android:textColor="@android:color/black"
+                />
+
+            <ImageView
+                android:id="@+id/icon_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dip"
+                android:layout_toEndOf="@+id/like_layout"
+                android:src="@drawable/ic_comment"/>
+
+            <Button
+                android:id="@+id/add_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="32dip"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20.5dip"
+                android:layout_marginEnd="10.5dip"
+                android:background="@drawable/text_button_drawable"
+                android:elevation="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="@string/write_a_comment"
+                android:textColor="@color/color_accent"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/comment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="20dip"
+        android:text="@string/comments"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"/>
+
+</LinearLayout>

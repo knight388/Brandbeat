@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "brandbeattestproject",
+    "project_number": "673486019862",
+    "name": "BrandBeatTestProject"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673486019862:android:f2ad025de4d11581",
+        "client_id": "android:com.mgrmobi.brandbeat",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.mgrmobi.brandbeat",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673486019862-42g7qft804d60bdqgtr9551dpl3np5gu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mgrmobi.brandbeat",
+            "certificate_hash": "D462359A84CBB9A864F172CFBBBEBFC0FF309D9A"
+          }
+        },
+        {
+          "client_id": "673486019862-hr92nqemss1316cfluk7d0e17mp1okg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

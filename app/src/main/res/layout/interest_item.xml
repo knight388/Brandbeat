@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                xmlns:auto="http://schemas.android.com/apk/res-auto"
+                android:clickable="true"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="102dp"
+        android:id="@+id/relative"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="102dp">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/icon"
+        android:layout_width="92dip"
+        android:layout_height="92dip"
+        android:background="@drawable/standart_ripple"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        auto:roundAsCircle="true"
+        auto:viewAspectRatio="1">
+    </com.facebook.drawee.view.SimpleDraweeView>
+
+        <ImageView
+            android:id="@+id/select_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/selected_interests"
+            android:layout_alignTop="@+id/icon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/name"
+        style="@style/SmallText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:text=""/>
+    <View
+        android:layout_width="92dip"
+        android:layout_height="92dip"
+        android:id="@+id/blurred_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:visibility="gone"
+        android:background="@color/achvmients_blur"/>
+</RelativeLayout>

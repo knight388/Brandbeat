@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">21dp</dimen>
+    <dimen name="activity_vertical_margin">21dp</dimen>
+    <dimen name="typical_button_text_size">14sp</dimen>
+    <dimen name="top_dialog_margin">15dip</dimen>
+    <dimen name="left_dialog_margin">15dip</dimen>
+    <dimen name="right_dialog_margin">15dip</dimen>
+    <dimen name="bottom_dialog_margin">15dip</dimen>
+    <dimen name="grid_spacing">10dip</dimen>
+    <dimen name="social_button_size">32dip</dimen>
+    <dimen name="progress_size">80dip</dimen>
+    <dimen name="standart_margin">16dip</dimen>
+    <dimen name="icon_size">40dip</dimen>
+    <dimen name="padding_start_edit_view">10dip</dimen>
+    <dimen name="brad_image_for_adapter_width">85dip</dimen>
+
+    <item name="height_nav_header_collapse" format="float" type="dimen">150</item>
+    <item name="y_root_move_collapse" format="float" type="dimen">100</item>
+    <item name="avatar_y_collapse" format="float" type="dimen">50</item>
+    <item name="name_y_collapse" format="float" type="dimen">90</item>
+
+    <item name="nav_header_expand_height" format="float" type="dimen">50</item>
+    <item name="root_y_expand" format="float" type="dimen">0</item>
+    <item name="name_x_move_expand" format="float" type="dimen">50</item>
+    <item name="name_y_avatar_expand" format="float" type="dimen">4</item>
+    <item name="name_y_move" format="float" type="dimen">15</item>
+    <integer name="number_of_compare_brands">5</integer>
+    <dimen name="bottom_compare_view_height">100dip</dimen>
+    <dimen name="bottom_item_height">85dip</dimen>
+</resources>

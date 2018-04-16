@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="height_nav_header_collapse" format="float" type="dimen">155</item>
+    <item name="y_root_move_collapse" format="float" type="dimen">105</item>
+    <item name="avatar_y_collapse" format="float" type="dimen">35</item>
+    <item name="name_y_collapse" format="float" type="dimen">95</item>
+
+    <item name="nav_header_expand_height" format="float" type="dimen">55</item>
+    <item name="root_y_expand" format="float" type="dimen">05</item>
+    <item name="name_x_move_expand" format="float" type="dimen">55</item>
+    <item name="name_y_avatar_expand" format="float" type="dimen">10</item>
+    <item name="name_y_move" format="float" type="dimen">15</item>
+</resources>

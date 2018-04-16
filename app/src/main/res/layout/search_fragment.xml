@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_type_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_button_back">
+
+        <Button
+            android:id="@+id/search_1"
+            android:background="@drawable/button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/search_title_1"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/search_2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/search_title_2"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/search_3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/search_title_3"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="10dip"
+        android:visibility="visible"
+        android:layout_below="@+id/search_type_bar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="10dip"
+        android:visibility="visible"
+        android:layout_below="@+id/search_type_bar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="10dip"
+        android:visibility="visible"
+        android:layout_below="@+id/search_type_bar" />
+
+    <com.mgrmobi.brandbeat.ui.widget.progress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dip"
+        android:visibility="gone"
+        app:matProg_barColor="@color/button_background"
+        app:matProg_progressIndeterminate="true"/>
+
+    <LinearLayout
+        android:id="@+id/no_found_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dip"
+            android:gravity="center"
+            android:text="@string/no_brands_found"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/add_brand"
+            android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/button_drawable"
+            android:text="@string/add_brand"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

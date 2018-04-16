@@ -1,0 +1,95 @@
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/confirm_order_appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                app:titleTextColor="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                style="@style/MyCustomTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/flaoting_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            fab:layout_anchorGravity="bottom|right|end"
+            android:paddingRight="10dp"
+            android:layout_gravity="bottom|right"
+            fab:fab_hideAnimation="@anim/show_from_bottom"
+            fab:fab_showAnimation="@anim/hide_to_bottom"
+            fab:menu_backgroundColor="@color/fab_background_color"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_position="left"
+            fab:menu_labels_singleLine="true"
+            fab:menu_labels_style="@style/MenuLabelsStyle">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/add_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_loyalty_white_24dp"
+                fab:fab_label="@string/add_brand"
+                fab:fab_size="normal"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/add_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_create_white_24dp"
+                fab:fab_label="@string/write_a_review"
+                fab:fab_size="normal"/>
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemBackground="@android:color/transparent"
+        app:itemIconTint="@color/color_menu_selector"
+        app:itemTextColor="@color/color_text_menu_selector"
+        app:menu="@menu/navigation_menu"
+        />
+</android.support.v4.widget.DrawerLayout>

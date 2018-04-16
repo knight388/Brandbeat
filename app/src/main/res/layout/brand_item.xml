@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="@dimen/brad_image_for_adapter_width"
+              android:layout_height="85dip">
+    <ImageView
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="match_parent"
+        android:layout_margin="10dip"
+        android:id="@+id/brand_image"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>

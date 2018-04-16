@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_places_api_key">AIzaSyCXK-LgjytZQUfIXHk5G1sGgPEt_AT0Pf4</string>
+    <string name="fb_app_id">220577918275312</string>
+    <string name="fb_service">com.facebook.app.FacebookContentProvider220577918275312</string>
+    <string name="gcm_sender_id">673486019862</string>
+    <string name="twitter_api_key">KugHW5iKSFhL4xtnqLFTsvtCD</string>
+    <string name="twitter_api_consumer_secret">lQ6OorDned9td63jv6rrEtg9EymCOXixxhqnL4fMk0xvk0kY1D</string>
+    <string name="twitter_owner_api">1706413027</string>
+    <string name="linked_in_client_id">77ie0kqofltru5</string>
+    <string name="linked_in_client_secret">AZs21M3ZtNUxGBbZ</string>
+    <string name="linked_in_redirect_url">http://brand-beat.com/</string>
+    <string-array name="linked_in_params">
+        <item>r_basicprofile</item>
+        <item>r_emailaddress</item>
+        <item>w_share</item>
+    </string-array>
+</resources>

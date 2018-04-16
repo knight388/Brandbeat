@@ -1,0 +1,255 @@
+<resources>
+    <string name="app_name">Brand Beat</string>
+    <string name="register_button_title">Register</string>
+    <string name="register_login_view">REGISTER NOW</string>
+    <string name="forget_your_password">Forgot your password?</string>
+    <string name="login_button_title">LOGIN</string>
+    <string name="title_login">Login</string>
+    <string name="enter_login">User Name</string>
+    <string name="enter_password">Password</string>
+    <string name="enter_name">Name</string>
+    <string name="enter_surname">Surname</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_location">Location</string>
+    <string name="enter_gender">Gender</string>
+    <string name="enter_date_of_birthday">D. O. B.</string>
+    <string name="via_social_network">via Social Networks</string>
+    <string name="or_via_social_network">OR via Social Networks</string>
+    <string name="facebook">facebook</string>
+    <string name="twitter">twitter</string>
+    <string name="google_plus">google +</string>
+    <string name="linked_in">LinkedIn</string>
+    <string name="loading">Loading…</string>
+    <string name="restore_password">Restore Password</string>
+    <string name="submit">Submit</string>
+    <string name="review">Review</string>
+    <string name="photos">Photos</string>
+    <string name="reviews">Reviews</string>
+    <string name="followers">Followers</string>
+    <string name="have_account">Don’t have an Account?</string>
+    <string name="interests_title_toolbar">Interests</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="please_choose_interest">Please select at least one interest</string>
+    <string name="interests">Edit Interests</string>
+    <string name="alert_message_interests">The data you entered is not saved. Do you want to leave the screen?</string>
+    <string name="title_alert_message_interests">Message</string>
+    <string name="password">Password</string>
+    <string name="ok">OK</string>
+    <string name="cancel">cancel</string>
+    <string name="error_unknown">Some error occurred. Try again later.</string>
+    <string name="input_name">enter name</string>
+    <string name="error_email">wrong email</string>
+    <string name="enter_d_o_b">enter date of birthday</string>
+    <string name="d_o_b">D.O.B.</string>
+    <string name="add_phone">Add Phone</string>
+    <string name="add_income">Add Income</string>
+    <string name="profile">Profile</string>
+    <string name="cant_find_user">Can\'t find user</string>
+    <!--menu items-->
+    <string name="feed">Feed</string>
+    <string name="write_review">Write Review</string>
+    <string name="trending">Compare</string>
+    <string name="add_brand">Add Brand</string>
+    <string name="recent">Recent</string>
+    <string name="edit_inerested">Edit Interests</string>
+    <string name="notification">Notifications</string>
+    <string name="about">About</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="sign_out">SIGN OUT</string>
+
+    <string name="sign_out_text">You have sign out\n Successfully</string>
+    <string name="login_again">Login Again</string>
+
+    <!-- feed-->
+    <string name="my_feed">BRANDS FEED</string>
+    <string name="local_feed">TRENDING</string>
+    <string name="suggested_brend">Suggested Brands</string>
+    <!--errors-->
+    <string name="null_password">Password can not be empty</string>
+    <string name="null_email">Login can not be empty</string>
+    <string name="reviewed">Reviewed</string>
+    <string name="error">Error</string>
+
+    <string name="write_a_comment">Add comment</string>
+    <!--product-->
+    <string name="compare">compare</string>
+    <string name="write_a_review">Write a review</string>
+    <string name="follow">follow</string>
+    <string name="Write_a_Review">Write a Review</string>
+    <string name="select_rating">Select Rating</string>
+    <string name="share">Share</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <!--share-->
+    <string name="reviewed_share"> reviewed </string>
+    <string name="via_brand_beat"> via Brand Beat: </string>
+    <!--review-->
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="comments">Comments</string>
+    <string name="no_comment">no comments</string>
+    <string name="achievements">Achievements</string>
+    <string name="achievement">Achievement</string>
+    <string name="add_picture">Add picture</string>
+    <string name="image_chooser_title">Choose file:</string>
+    <string name="update">update</string>
+    <string name="update_password">Update Password</string>
+    <string name="current_password">Current password</string>
+    <string name="confirm_old_password">Confirm new password</string>
+    <string name="new_password">New password</string>
+    <string-array name="genders">
+        <item>male</item>
+        <item>female</item>
+        <item>Gender</item>
+    </string-array>
+    <string name="required">This field is required</string>
+    <string name="summary">Summary</string>
+    <string name="submit_product">Submit Product</string>
+    <string name="null_name_error">Please enter name</string>
+    <string name="null_email_error">Please enter email</string>
+    <string name="null_password_error">Please enter password</string>
+    <string name="length_name_error">name should not be more than 36 characters</string>
+    <string name="inccorect_email">incorrect email address</string>
+    <string name="please_enter_location">Please Enter Location</string>
+    <string name="please_enter_current_location">Please enter current location</string>
+    <string name="add_photo_error">Please add photo for brand</string>
+    <string name="choose_category">Please choose Category</string>
+    <string name="choose_sub_category">Please choose Sub Category</string>
+    <string name="success">Success!</string>
+    <string name="brand_send">Brand send for review</string>
+    <string name="select_category">Category</string>
+    <string name="select_subcategory">Sub category</string>
+    <string name="warning">Warning!</string>
+    <string name="save_message">The data you entered is not saved. Do you want to leave the screen?</string>
+    <string name="review_cancel_text">Discard review?</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="edit_review">Edit review</string>
+    <string name="please_enter_dob">Please Enter Date of Birthday</string>
+    <string name="un_follow">UnFollow</string>
+    <string name="profile_change_suc">Profile change success!</string>
+    <string name="delete_photo">Delete photo</string>
+    <string name="wrong_login">Wrong Login/Password</string>
+    <string name="remind_password_message">An email with instructions to reset password has been sent to your email address</string>
+    <string name="null_comment_message">Please, enter comment text</string>
+    <string name="enter_comment">Add comment</string>
+    <string name="add_comment_success">Add comment success</string>
+    <string name="edit_comment_success">Edit comment success</string>
+    <string name="see_all">See All</string>
+    <string name="swipe_down">Swipe down to compare</string>
+    <string name="compare_brands">Compare Brands</string>
+    <string name="comparison">Comparison</string>
+    <string name="just_now"> just now</string>
+    <string name="a_minute_ago"> a minute ago</string>
+    <string name="minutes_ago"> minutes ago</string>
+    <string name="an_hour_ago"> an hour ago</string>
+    <string name="hours_ago"> hours ago</string>
+    <string name="yesterday"> yesterday</string>
+    <string name="no_brands_found">No brands found</string>
+    <string name="no_local_feed_found">No local feed found</string>
+    <string name="select_notification_type">Select Notification Type</string>
+    <string name="replies">Replies</string>
+    <string name="new_followers">New Followers</string>
+    <string name="new_achievements">New Achievements</string>
+    <string name="administrator_messages">Administrator Messages</string>
+    <string name="news">News</string>
+    <string name="is_following_you"> is following you</string>
+    <string name="likes_your_review">Likes your review</string>
+    <string name="comment_your_review">commented your review</string>
+    <string name="like_your_comment">Likes your Comment</string>
+    <string name="replied_your_comment">replied your comment</string>
+    <string name="your_have_new_achievement">Your have new achievement</string>
+    <string name="message_type_7">type</string>
+    <string name="message_type_8">type</string>
+    <string name="yout_brand_accepted">You brand has been accepted</string>
+    <string name="you_brand_rejected">You brand has been rejected</string>
+    <string name="no_internet">No internet!</string>
+    <string name="dont_response_location">We were unable to detect your location.\nUpdate user without location</string>
+    <string name="help_make_better">Help make it better...</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send_email">Send email...</string>
+    <string name="feedback_email">info@brand-beat.com</string>
+    <string name="email_theme">Brand Beat problem</string>
+    <string name="android">android</string>
+    <string name="about_us">About Us</string>
+    <string name="no_recently_brand">No recently viewed brands</string>
+    <string name="search">Search</string>
+    <string name="change_password">Change password</string>
+    <string name="new_trending">NEW</string>
+    <string name="length_phone_number">Min length phone 7 charaters</string>
+    <string name="text_field_is_required">Text field is required</string>
+    <string name="please_choose_two_brands">please choose two brands</string>
+
+    <string name="button_accept_rationale">Accept</string>
+    <string name="button_decline_rationale">Decline</string>
+    <string name="use_location">Please allow us to use your device\'s geolocation.</string>
+    <string name="use_account">Allow BrandBeat to access your contacts?</string>
+    <string name="use_storage">Allow BrandBeat to access your photos, media, and files on your device?</string>
+    <string name="edit_interests">Edit Interests</string>
+    <string name="edit_interests_title">Subscribe to brands to get new reviews here</string>
+    <string name="no_notification">No notifications here</string>
+    <string name="manage_notifications">Manage notifications</string>
+
+    <string name="search_title_1">BRAND</string>
+    <string name="search_title_2">PEOPLE</string>
+    <string name="search_title_3">COMMENTS</string>
+
+    <string name="check">Check</string>
+    <string name="share_text">in Brand Beat App</string>
+    <string name="url_share">http://brand-beat.com/</string>
+    <string name="change_income_range">Do you want change your income range?</string>
+
+    
+    <string name="behavior_event_details_bottomsheet">com.mgrmobi.brandbeat.ui.widget.brand_view.EventDetailsBottomSheetBehavior</string>
+    <string name="cd_back">Back button</string>
+    <string name="select_to_compare">Select to compare</string>
+
+    <string name="no_brands_in_sub_category">No brands in this subCategory.</string>
+    <string name="delete_photo_message">Are you sure you want to delete this picture?</string>
+    <!--Photo size-->
+    <string name="size_small">\?size=S</string>
+    <string name="size_middle">\?size=M</string>
+    <string name="size_large">\?size=L</string>
+    <string name="all">All</string>
+    <!-- error message-->
+    <string name="not_brands">This category are no have brands</string>
+
+    <!--about us-->
+    <string name="about_us_title">Our mission is to make brands more transparent to people who buy them (consumers).</string>
+    <string name="second_text_about_us">We at Brand Beat are passionately curious about people and the brands they use in their daily life.
+        We constantly strive to make brand choices easier for consumers beyond what they hear from the brand itself.
+        We strive to bring you advice &amp; reviews from millions thousands of consumers for a wide variety of brand
+        choices you face every day with the goal of making decisions easier for consumers.
+    \n \n We assess new brands in market place, interpret trends and bring the right choices at your fingertips. \n \n
+    We are an independent company, managed and controlled by people who are brand enthusiasts and who believe in brand transparency for today\'s consumers.</string>
+    <string name="thrid_text">                    Hear brand reviews from real consumers</string>
+
+
+    <string name="terms_text">I agree with Terms and Conditions</string>
+
+
+    <string-array name="image_ids">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+        <item>@drawable/image_4</item>
+        <item>@drawable/image_5</item>
+        <item>@drawable/image_6</item>
+        <item>@drawable/image_7</item>
+        <item>@drawable/image_8</item>
+        <item>@drawable/image_9</item>
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+        <item>@drawable/image_4</item>
+        <item>@drawable/image_5</item>
+        <item>@drawable/image_6</item>
+        <item>@drawable/image_7</item>
+        <item>@drawable/image_8</item>
+        <item>@drawable/image_9</item>
+    </string-array>
+</resources>
